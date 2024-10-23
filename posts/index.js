@@ -8,7 +8,11 @@ const axios = require("axios");
 app = express();
 app.use(body_parser.json());
 
-const posts = {};
+const posts = {
+  "1": { id: "1", title: "First Post" },
+  "2": { id: "2", title: "Second Post" },
+  "3": { id: "3", title: "Third Post" }
+};
 // GET
 app.get("/posts", (req, res)=>{
   res.status(200).json(posts)
